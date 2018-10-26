@@ -12,7 +12,7 @@ import sqlite3
 with sqlite3.connect('quit.db') as db:
     c = db.cursor()
 
-c.execute('CREATE TABLE IF NOT EXISTS user (username TEXT NOT NULL ,password TEX NOT NULL);')
+c.execute('CREATE TABLE IF NOT EXISTS user (username TEXT NOT NULL PRIMARY KEY,password TEX NOT NULL);')
 db.commit()
 db.close()
 
@@ -52,8 +52,8 @@ class main:
             c = db.cursor()
 
         #Find Existing username if any take proper action
-        find_user = ('SELECT * FROM user WHERE username = ?')
-        c.execute(find_user,[(self.username.get())])        
+        find_user = ('SELECT username FROM user WHERE username = ?')
+        c.execute(find_user,[(self.n_username.get())])        
         if c.fetchall():
             ms.showerror('Error!','Username Taken Try a Diffrent One.')
         else:
