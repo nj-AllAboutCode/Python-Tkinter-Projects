@@ -101,11 +101,8 @@ class main:
 
     
 
-if __name__ == '__main__':
-	#Create Object
-	#and setup window
-    root = Tk()
-    root.title('Login Form')
-    #root.geometry('400x350+300+300')
-    main(root)
-    root.mainloop()﻿
+#create window and application object
+root = Tk()
+#root.title("Login Form")
+main(root)
+root.mainloop()
