@@ -99,13 +99,11 @@ class main:
         Button(self.crf,text = 'Create Account',bd = 3 ,font = ('',15),padx=5,pady=5,command=self.new_user).grid()
         Button(self.crf,text = 'Go to Login',bd = 3 ,font = ('',15),padx=5,pady=5,command=self.log).grid(row=2,column=1)
 
-    
-
-if __name__ == '__main__':
+  if __name__ == '__main__':
 	#Create Object
 	#and setup window
     root = Tk()
     root.title('Login Form')
     #root.geometry('400x350+300+300')
     main(root)
-    root.mainloop()﻿
+    root.mainloop()
